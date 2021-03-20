@@ -10,13 +10,15 @@ Dog.prototype.fatten = function() {
     console.log(`The ${this.color} ${this.breed} was ${this.weight} pounds, but is now ${this.weight + 1} pounds. Woof!`)
 }
 
+let pug = new Dog('Pug', 'black', 5);
+let corgi = new Dog('Corgi', 'white', 10)
+
+console.log(pug.fatten(), corgi.fatten())
+
+
+
 function Pug() {
 
 }
 
 Pug.prototype = Object.create(Dog.prototype)
-
-let pug = new Dog('Pug', 'black', 5);
-let corgi = new Dog('Corgi', 'white', 10)
-
-console.log(pug.fatten(), corgi.fatten())
